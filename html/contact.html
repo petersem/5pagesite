@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | ML Strength</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/cb2041dfab.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+
+<body>
+
+    <header id="site-header"></header>
+    <script src="/js/load-header.js" defer></script>
+    <script src="/js/contact-validation.js" defer></script>
+    <script src="/js/help.js" defer></script>
+
+    <main>
+
+        <section class="page-banner contact">
+            <h1>Contact ML Strength</h1>
+        </section>
+
+        <section class="content-block">
+            <p>
+                Have a question or want to join? There’s no obligation and no pressure.
+                Send us a message and our team will get back to you.
+            </p>
+        </section>
+
+        <section id="contact-form">
+            <form id="contactForm">
+
+                <i class="fa-duotone fa-solid fa-circle-user-circle-question"></i> <label for="enquiryType">Enquiry Type</label>
+                <select id="enquiryType" name="enquiryType" required>
+                    <option value="">Please select…</option>
+                    <option value="general">General Enquiry</option>
+                    <option value="membership">Membership</option>
+                    <option value="classes">Classes</option>
+                    <option value="locations">Locations</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                </select>
+                <span class="error">Please choose an enquiry type.</span>
+
+
+                <i class="fa-slab-press fa-regular fa-address-card"></i> <label for="name">Name</label>
+                <input type="text" id="name" name="name" required pattern="^[A-Za-z ]{2,40}$">
+                <span class="error" id="nameError">Please enter 2–40 characters.</span>
+
+                <i class="fa-sharp fa-light fa-message-text"></i> <label for="contactMethod">Preferred Contact Method</label>
+                <select id="contactMethod" name="contactMethod" required>
+                    <option value="">Please select…</option>
+                    <option value="email">Email</option>
+                    <option value="phone">Phone Call</option>
+                    <option value="sms">SMS</option>
+                </select>
+                <span class="error">Please select a contact method.</span>
+
+                <i class="fa-sharp fa-regular fa-timer"></i> <label for="contactTime">Preferred Contact Time</label>
+                <select id="contactTime" name="contactTime" required>
+                    <option value="">Please select…</option>
+                    <option value="morning">Morning (8am–12pm)</option>
+                    <option value="afternoon">Afternoon (12pm–4pm)</option>
+                    <option value="evening">Evening (4pm–8pm)</option>
+                </select>
+                <span class="error">Please choose a preferred contact time.</span>
+
+                <i class="fa-sharp fa-regular fa-at"></i> <label for="email">Email</label>
+                <input type="email" id="email" name="email" required
+                    pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$">
+                <span class="error" id="emailError">Enter a valid email address.</span>
+
+                <i class="fa-sharp-duotone fa-thin fa-phone"></i> <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required pattern="^(?=(?:\D*\d){8,11}$)(?:\+61|61|0)?[0-9 ]+$">
+                <span class="error" id="phoneError">Phone must be 8–12 digits (spaces and + allowed).</span>
+
+
+                <i class="fa-sharp fa-regular fa-message"></i> <label for="message">Message</label>
+                <textarea id="message" name="message" minlength="10" maxLength="500" required rows="5"></textarea>
+                <span class="error" id="messageError">Message must be 10–500 characters.</span>
+
+                <button type="submit" onclick="">Send Message</button>
+                <p id="help-container">
+                    <a href="#" id="help-link" aria-haspopup="true" aria-expanded="false">
+                        Help
+                    </a>
+                    <span id="help-popup" role="note">
+                        Please complete all of the required fields.
+                        Your information is kept confidential.
+
+                        <video id="help-video" width="435" controls>
+                            <source src="https://media.istockphoto.com/id/2222892871/video/focused-woman-performing-medicine-ball-twists-for-core-strength-in-a-vibrant-gym-environment.mp4?p=1&s=mp4-640x640-is&k=20&c=b5nxmIKCWmwS4RwWJ-2ubEEj9iF9eHg0VcSFzt1jn7o=" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </span>
+                </p>
+
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer id="site-footer"></footer>
+    <script src="/js/load-footer.js"></script>
+
+</body>
+
+</html>
